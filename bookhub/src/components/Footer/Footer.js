@@ -1,48 +1,59 @@
-import React from 'react';
-import Logo from '../../assets/images/logo.png';
-import InstagramIcon from '../../assets/images/instagram.png';
-import './Footer.css';
 
-function Footer() {
-    return (
-        <footer className="footer">
-            <div className="footer-container">
-                {/* Logo e Redes Sociais */}
-                <div className="footer-logo">
-                    <img src={Logo} alt="BookHub Logo" />
-                    <div className="footer-social">
-                        <p>Acompanhe-nos:</p>
-                        <div className="social-icon">
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                                <img src={InstagramIcon} alt="Instagram" />
-                            </a>
-                        </div>
-                    </div>
-                    <p className="footer-copyright">© 2025 BookHub. Todos os direitos reservados.</p>
-                </div>
-                
-                {/* Links Rápidos */}
-                <div className="footer-links">
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/livros">Livros</a></li>
-                        <li><a href="/literatura-brasileira">Literatura Brasileira</a></li>
-                        <li><a href="/sobre-nos">Sobre Nós</a></li>
-                    </ul>
-                </div>
-                
-                {/* Contato e Endereço */}
-                <div className="footer-contact">
-                    <h4>Endereço</h4>
-                    <p>R. Ítalo Greco, 4560 - Vila Imperador, Franca - SP, 14405-191</p>
-                    <h4>Contato</h4>
-                    <p>📞 +55 16 99237-1637</p>
-                    <p>📧 bookhub.suporte@gmail.com</p>
-                </div>
+import { Footer } from "flowbite-react";
+import {  BsGithub, BsInstagram} from "react-icons/bs";
+  
+
+const FooterComponent = () => {
+  return (
+    <Footer container className="w-full fixed bottom-0 left-0 bg-white">
+      <div className="w-full">
+        <div className="grid w-full justify-between sm:flex sm:justify-between md:grid-cols-1">
+          <div className="w-full">
+            <Footer.Brand
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 w-full">
+            <div className="w-full">
+              <Footer.Title title="links" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Home</Footer.Link>
+                <Footer.Link href="#">Livros</Footer.Link>
+                <Footer.Link href="#">Literatura Brasileira</Footer.Link>
+                <Footer.Link href="#">Sobre Nós</Footer.Link>
+              </Footer.LinkGroup>
             </div>
-        </footer>
-    );
-}
+            <div className="w-full">
+              <Footer.Title title="Contate-nos" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">+55 16 99297-1607</Footer.Link>
+                <Footer.Link href="#">bookhub@gmail.com</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div className="w-full">
+              <Footer.Title title="Endereço" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="https://www.google.com/maps/place/Fatec+Franca+-+Faculdade+de+Tecnologia+de+Franca+Dr+Thomaz+Novelino/@-20.5149138,-47.4032692,17z/data=!3m1!4b1!4m6!3m5!1s0x94b0a650b93c4b5f:0xbe0e42f3aa42525c!8m2!3d-20.5149138!4d-47.4006943!16s%2Fg%2F1jkxwkhq2?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D">
+                  R. Irênio Greco, 4580, Vila Imperador - Franca-SP
+                </Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+          </div>
+        </div>
+        <Footer.Divider />
+        <div className="w-full sm:flex sm:items-center sm:justify-between">
+          
+          <Footer.Copyright href="#" by="BookHub™" year={2025} />
+          
+         
+          <div className="mt-4 flex space-x-6 sm:mt-0 sm:ml-auto">
+            
+            <Footer.Icon href="#" icon={BsInstagram} />
+            <Footer.Icon href="https://github.com/anamota13/BOOKHUB_PI" icon={BsGithub} />
+          </div>
+        </div>
+      </div>
+    </Footer>
+  );
+};
 
-export default Footer;
+export default FooterComponent;
