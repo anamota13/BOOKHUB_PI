@@ -1,19 +1,18 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
-import FooterComponent from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
+import Cadastro from './components/Cadastro/Cadastro';
 import 'flowbite/dist/flowbite.css';
- 
-
 
 
 function App(){
     return (
         <div className='App'>
             <Navbar />
-            <FooterComponent />
+            <Footer />
+            <Cadastro />
         </div>
     );
 }
-
 
 export default App;
