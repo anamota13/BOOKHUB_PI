@@ -1,28 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../../assets/images/logo.png';
 
 import './Cadastro.css';
 
 const Cadastro = () => {
+    const [nome, setNome] = useState('');
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [confirmarSenha, setConfirmarSenha] = useState('');
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (nome && email && senha && confirmarSenha) {
+            if (senha === confirmarSenha) {
+                alert('Cadastro realizado com sucesso!');
+                console.log({ nome, email, senha });
+            } else {
+                alert('As senhas não coincidem.');
+            }
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    };
+
     return (
         <>
-            <header className="navbar">
-            </header>
+            <header className="navbar"></header>
 
             <div className="form-container">
                 <div className="form-card">
-                    
                     <img src={Logo} alt="Logo" className="logo" />
 
                     <h2 className="titulo-bemvindo">Seja bem-vindo!</h2>
 
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="input-group">
                             <label className="input-label">Nome</label>
                             <input
                                 type="text"
                                 className="input-field"
-                                placeholder="Nome"
+                                placeholder="Digite seu nome"
+                                value={nome}
+                                onChange={(e) => setNome(e.target.value)}
                             />
                         </div>
 
@@ -31,32 +52,53 @@ const Cadastro = () => {
                             <input
                                 type="email"
                                 className="input-field"
-                                placeholder="E-mail"
+                                placeholder="Digite seu e-mail"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
 
                         <div className="input-group">
-                            <label className="input-label">Telefone</label>
+                            <label className="input-label">Senha</label>
                             <input
-                                type="tel"
+                                type="password"
                                 className="input-field"
-                                placeholder="+55 Telefone"
+                                placeholder="Digite sua senha"
+                                value={senha}
+                                onChange={(e) => setSenha(e.target.value)}
                             />
                         </div>
 
                         <div className="input-group">
-                            <label className="input-label">Data de Nascimento</label>
+                            <label className="input-label">Confirmar Senha</label>
                             <input
-                                type="date"
+                                type="password"
                                 className="input-field"
+                                placeholder="Confirme a senha"
+                                value={confirmarSenha}
+                                onChange={(e) => setConfirmarSenha(e.target.value)}
                             />
                         </div>
 
                         <button
                             type="submit"
-                            className="submit-btn"
+                            className="btn-submit"
+                            style={{
+                                backgroundColor: '#fbbf24',
+                                borderRadius: '8px',
+                                border: 'none',
+                                color: 'black',
+                                padding: '10px 20px',
+                                fontSize: '14px',
+                                fontWeight: 'bold',
+                                cursor: 'pointer',
+                                transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+                                transition: 'transform 0.3s ease',
+                            }}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
                         >
-                            ENTRAR
+                            CADASTRAR
                         </button>
                     </form>
                 </div>

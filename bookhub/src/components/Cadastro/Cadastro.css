@@ -1,29 +1,18 @@
-/* Fundo branco para o body */
-body {
-    background-color: white;
-    /* Fundo branco para a página toda */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-
-
-/* Barra de navegação */
-.navbar {
-    width: 100%;
-    height: 40px;
-    background-color: #fbbf24;
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Fundo branco para o body */
+body {
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    min-height: 100vh;
 }
-
-
 
 /* Container do formulário */
 .form-container {
@@ -31,84 +20,90 @@ body {
     justify-content: center;
     align-items: center;
     background-color: white;
+    min-height: 100vh;
 }
 
 /* Cartão do formulário */
 .form-card {
-    display: flex;
     background-color: white;
     padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    align-items: left;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-}
-
-.form-card form label{
-    text-align: left;
-}
-
-.form-card form{
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    width: auto;
-    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
 }
 
+/* Logo centralizada com espaçamento */
 .logo {
-    width: 15rem;
+    width: 8rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Título "Seja bem-vindo!" */
 .titulo-bemvindo {
-    font-family: poppins;
-    text-align: center;
-    font-weight: bold       ;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+}
+
+/* Inputs mais leves e arredondados */
+.input-group {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-label label{
+    font-size: 10px;
 }
 
 .input-label {
-    padding: 0.12rem;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.3rem;
     display: block;
-    color: #4b5563;
-    margin-bottom: 0.1rem;
 }
 
+/* Inputs com bordas finas e arredondadas */
 .input-field {
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    padding: 0.9rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.9rem;
-    font-size: 1rem;
+    width: 100%;
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    font-size: 14px;
     outline: none;
+    background-color: white;
+    transition: border-color 0.3s ease-in-out;
 }
 
 .input-field:focus {
     border-color: #fbbf24;
-    box-shadow: 0 0 0 2px rgba(250, 179, 36, 0.5);
+    box-shadow: 0 0 5px rgba(250, 191, 36, 0.5);
 }
 
-/* Botão de envio */
-.submit-btn {
-    background-color: #fbbf24;
-    color: white;
-    padding: 0.75rem;
-    border-radius: 0.375rem;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.2s ease-in-out;
+.input-group input{
+    border-radius: 8px;
 }
 
-.submit-btn:hover {
-    background-color: #f59e0b;
+.input-field::placeholder {
+    font-style: italic; 
+    font-size: 14px; 
+    color: #888; 
 }
 
-.submit-btn:active {
-    background-color: #eab308;
+
+
+/* Melhor responsividade */
+@media (max-width: 400px) {
+    .form-card {
+        padding: 1.5rem;
+    }
 }

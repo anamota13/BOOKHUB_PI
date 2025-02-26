@@ -9,9 +9,9 @@ import 'flowbite/dist/flowbite.css';
 function App(){
     return (
         <div className='App'>
-            {/*<Navbar>*}}
+            {/*<Navbar>*/}
             {/*<Footer>*/} 
-            {/*<Cadastro>*/}
+            {/*<Cadastro />*/}
             <Login/>
         </div>
     );

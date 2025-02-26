@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../../assets/images/logo.png';
-
 import './Login.css';
 
 const Login = () => {
+    const [isHovered, setIsHovered] = useState(false); 
+
     return (
         <>
             <header className="navbar">
@@ -11,9 +12,7 @@ const Login = () => {
 
             <div className="form-container">
                 <div className="form-card">
-                    
                     <img src={Logo} alt="Logo" className="logo" />
-
                     <h2 className="titulo-bemvindo">Seja bem-vindo!</h2>
 
                     <form>
@@ -22,7 +21,7 @@ const Login = () => {
                             <input
                                 type="email"
                                 className="input-field"
-                                placeholder="E-mail"
+                                placeholder="Digite seu e-mail"
                             />
                         </div>
 
@@ -31,13 +30,27 @@ const Login = () => {
                             <input
                                 type="password"
                                 className="input-field"
-                                placeholder="Senha"
+                                placeholder="Digite sua senha"
                             />
                         </div>
 
                         <button
                             type="submit"
-                            className="submit-btn"
+                            className="btn-submit"
+                            style={{
+                                backgroundColor: '#fbbf24',
+                                borderRadius: '8px',
+                                border: 'none',
+                                color: 'black',
+                                padding: '10px 20px',
+                                fontSize: '14px',
+                                fontWeight: 'bold',
+                                cursor: 'pointer',
+                                transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+                                transition: 'transform 0.3s ease',
+                            }}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
                         >
                             ENTRAR
                         </button>
