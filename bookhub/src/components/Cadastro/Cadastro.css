@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    color: #333;
 }
 
 /* Fundo branco para o body */
@@ -50,8 +51,8 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    margin-top: 1.0rem;
-    margin-bottom: 1.0rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Inputs mais leves e arredondados */
@@ -99,6 +100,14 @@ body {
     color: #888; 
 }
 
+/* Esqueci minha senha*/
+.esqueci-senha p{
+    font-size: 14px;
+    font-style: italic;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 0.5rem;
+}
 
 
 /* Melhor responsividade */

@@ -8,10 +8,13 @@ const Login = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
+        <>
+        <header className="navbar"></header>
+
         <div className="form-container">
             <div className="form-card">
                 <img src={Logo} alt="Logo" className="logo" />
-                <h2 className="titulo-bemvindo">Seja bem-vindo!</h2>
+                <h2 className="titulo-bemvindo">Bem-vindo de volta!</h2>
 
                 <form>
                     <div className="input-group">
@@ -24,20 +27,24 @@ const Login = () => {
                         <input type="password" className="input-field" placeholder="Senha" />
                     </div>
 
+                    <div className='esqueci-senha'>
+                        <p><Link to="/">Esqueci minha senha</Link></p>
+                    </div>
+
                     <button
                         type="submit"
                         className="submit-btn"
                         style={{
-                            backgroundColor: isHovered ? '#fbbf24' : '#ffd700',
+                            backgroundColor: '#ffde59',
                             borderRadius: '8px',
                             border: 'none',
-                            color: 'black',
+                            color: '#292626',
                             padding: '10px 20px',
                             fontSize: '14px',
                             fontWeight: 'bold',
                             cursor: 'pointer',
-                            transition: 'transform 0.3s ease, background-color 0.3s ease',
-                            transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+                            transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+                            transition: 'transform 0.3s ease',
                         }}
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
@@ -50,12 +57,13 @@ const Login = () => {
                     </button>
                 </form>
 
-                {/* Adicionando Link para a página de Cadastro */}
+                
                 <label className="cadastro-label" style={{ marginTop: '20px' }}>
-                    Não tem conta? <Link to="/cadastro" style={{ color: 'yellow', fontWeight: 'bold', textDecoration: 'none' }}>Cadastre-se aqui!</Link>
+                    Não tem conta? <Link to="/cadastro" style={{ color: '#292626', fontWeight: 'bold', textDecoration: 'none' }}>Cadastre-se aqui!</Link>
                 </label>
             </div>
         </div>
+        </>
     );
 };
 

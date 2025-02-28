@@ -10,29 +10,30 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-            <div className="faixa"></div>
 
-            <div className="navbar-logo">
-                <img src={Logo} alt="Logo" className="logo" />
-            </div>
+            <div className="navbar-content">  {/* Nova div que envolve tudo menos a faixa */}
+                <div className="navbar-logo">
+                    <img src={Logo} alt="Logo" className="logo" />
+                </div>
 
-            <div className="navbar-search">
-                <input type="text" placeholder="Pesquisar..." />
-            </div>
+                <div className="navbar-search">
+                    <input type="text" placeholder="Pesquisar..." />
+                </div>
 
-            <ul className="navbar-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">Livros</a></li>
-                <li><a href="/products">Literatura Brasileira</a></li>
-                <li><a href="/contact">Sobre Nós</a></li>
-            </ul>
+                <ul className="navbar-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">Livros</a></li>
+                    <li><a href="/products">Literatura Brasileira</a></li>
+                    <li><a href="/contact">Sobre Nós</a></li>
+                </ul>
 
-            <div className="navbar-icon" onClick={() => navigate('/login')} style={{ cursor: 'pointer' }}>
-                <img src={Perfil} alt="Ícone de Perfil" />
-            </div>
+                <div className="navbar-icon" onClick={() => navigate('/login')} style={{ cursor: 'pointer' }}>
+                    <img src={Perfil} alt="Ícone de Perfil" />
+                </div>
 
-            <div className="carrinho-icon">
-                <img src={Carrinho} alt="Ícone de Carrinho de Compras" />
+                <div className="carrinho-icon">
+                    <img src={Carrinho} alt="Ícone de Carrinho de Compras" />
+                </div>
             </div>
         </nav>
     );

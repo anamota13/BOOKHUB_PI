@@ -84,10 +84,10 @@ const Cadastro = () => {
                             type="submit"
                             className="btn-submit"
                             style={{
-                                backgroundColor: '#fbbf24',
+                                backgroundColor: '#ffde59',
                                 borderRadius: '8px',
                                 border: 'none',
-                                color: 'black',
+                                color: '#292626',
                                 padding: '10px 20px',
                                 fontSize: '14px',
                                 fontWeight: 'bold',

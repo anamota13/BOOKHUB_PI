@@ -1,5 +1,6 @@
 .navbar {
     display: flex;
+    flex-direction: column; /* Mantém a faixa separada */
     align-items: center;
     width: 100%; 
     background-color: #ffffff; 
@@ -8,23 +9,22 @@
     top: 0;
     left: 0;
     z-index: 1000; 
-    padding: 0 20px; 
+    padding: 0 20px;
 }
 
-.navbar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+
+/* Nova div que agrupa os itens da navbar */
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 30px;
-    background-color: #ffde59;
-    z-index: 1001; 
+    margin-top: 3.0rem; 
+    padding: 10px 20px;
 }
-
 
 .navbar-logo .logo {
-    height: 25vh;
+    width: 8rem;
     margin-left: 30px; 
     max-width: 100%;
     transition: transform 0.3s ease;
@@ -34,7 +34,6 @@
     transform: scale(1.1);
 }
 
-
 .navbar-search {
     flex-grow: 1; 
     margin: 0 20px; 
@@ -43,7 +42,7 @@
 
 .navbar-search input {
     width: 100%; 
-    padding: 8px;
+    padding: 7px;
     border: 1px solid #e7e7e7;
     border-radius: 20px; 
     font-size: 13px;
@@ -64,7 +63,6 @@
 .navbar-icon img:hover {
     transform: scale(1.1);
 }
-
 
 .carrinho-icon {
     margin-right: 10px;
@@ -90,19 +88,16 @@
     margin-left: 15px;
 }
 
-
 .navbar-links a {
     text-decoration: none;
-    color: #666;
+    color: #333;
     font-size: 15px;
     font-family: "Poppins", Arial, sans-serif;
     font-weight: 500;
     padding: 10px 15px; 
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
-    
 }
-
 
 .navbar-links a::after {
     content: "";
@@ -115,12 +110,10 @@
     transition: width 0.3s ease, left 0.3s ease;
 }
 
-
 .navbar-links a:hover {
     color: #ffde59;
     transform: scale(1.1);
 }
-
 
 .navbar-links a:hover::after {
     width: 100%;
