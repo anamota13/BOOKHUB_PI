@@ -4,6 +4,9 @@ import Logo from '../../assets/images/logo.png';
 import Perfil from '../../assets/images/perfil.png';
 import Carrinho from '../../assets/images/carrinho.png';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
+import LiteraturaBrasileira from '../LiteraturaBrasileira/LiteraturaBrasileira';
+
 
 function Navbar() {
     const navigate = useNavigate();
@@ -23,7 +26,7 @@ function Navbar() {
                 <ul className="navbar-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">Livros</a></li>
-                    <li><a href="/products">Literatura Brasileira</a></li>
+                    <Link to="/literatura-brasileira">Literatura Brasileira</Link>
                     <li><a href="/contact">Sobre Nós</a></li>
                 </ul>
 

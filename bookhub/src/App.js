@@ -6,8 +6,10 @@ import Cadastro from './components/Cadastro/Cadastro';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 import Faixa from './components/Faixa/Faixa';
-
+import LiteraturaBrasileira from './components/LiteraturaBrasileira/LiteraturaBrasileira';
 import 'flowbite/dist/flowbite.css';
+import './index.css'; // ou outro arquivo CSS
+
 
 function App() {
     return (
@@ -39,6 +41,7 @@ function MainContent() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="*" element={<Navigate to="/" />} /> 
+                <Route path="/literatura-brasileira" element={<LiteraturaBrasileira />} />
             </Routes>
 
             {showNavbar && <Footer />}

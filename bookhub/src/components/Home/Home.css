@@ -1,0 +1,50 @@
+.img-destaque {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 2%;
+    margin-top: 10%;
+  }
+  
+  .destaque {
+    width: 200%; 
+    max-width: 1200px; 
+    border-radius: 15px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+  }
+  
+  .destaque:hover {
+    transform: scale(1.05); 
+  }
+
+  .text-destaque {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 80%;
+    
+  }
+  
+  .text-destaque h1 {
+    color: black;
+    background-color: #ffde59;
+    font-weight: bold;
+    padding: 5px; /* Adiciona espaço interno para melhor visualização */
+    border-radius: 20px; /* Suaviza as bordas do fundo */
+    text-align: center;
+    margin-right: 90%;
+    
+  }
+  
+  .no-footer-fixed footer {
+    position: static; /* Remove o fixo */
+    bottom: auto; /* Desativa a posição inferior */
+  }
+
+  .text-products h2 {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    color: black;
+    font-size: 120%;
+  }
+  
