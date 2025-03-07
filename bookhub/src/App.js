@@ -9,6 +9,7 @@ import Faixa from './components/Faixa/Faixa';
 import LiteraturaBrasileira from './components/LiteraturaBrasileira/LiteraturaBrasileira';
 import 'flowbite/dist/flowbite.css';
 import './index.css'; // ou outro arquivo CSS
+import Sobre from './components/Sobre/Sobre.js';
 
 
 function App() {
@@ -41,6 +42,7 @@ function MainContent() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="*" element={<Navigate to="/" />} /> 
+                <Route path="/sobre" element={<Sobre/>} />
                 <Route path="/literatura-brasileira" element={<LiteraturaBrasileira />} />
             </Routes>
 

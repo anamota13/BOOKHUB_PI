@@ -6,6 +6,7 @@ import Carrinho from '../../assets/images/carrinho.png';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import LiteraturaBrasileira from '../LiteraturaBrasileira/LiteraturaBrasileira';
+import Sobre from '../Sobre/Sobre.js';
 
 
 function Navbar() {
@@ -27,7 +28,7 @@ function Navbar() {
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">Livros</a></li>
                     <Link to="/literatura-brasileira">Literatura Brasileira</Link>
-                    <li><a href="/contact">Sobre Nós</a></li>
+                    <Link to="/sobre">Sobre Nós</Link>
                 </ul>
 
                 <div className="navbar-icon" onClick={() => navigate('/login')} style={{ cursor: 'pointer' }}>

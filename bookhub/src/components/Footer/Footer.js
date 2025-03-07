@@ -2,7 +2,7 @@ import React from 'react';
 import { BsGithub, BsInstagram } from "react-icons/bs";
 import '../Footer/Footer.css';
 import LiteraturaBrasileira from '../LiteraturaBrasileira/LiteraturaBrasileira';
-
+import Sobre from '../Sobre/Sobre.js';
 
 const Footer = () => {
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
               <li><a href="#">Home</a></li>
               <li><a href="#">Livros</a></li>
               <li><a href="LiteraturaBrasileira.js">Literatura Brasileira</a></li>
-              <li><a href="#">Sobre Nós</a></li>
+              <li><a href="Sobre.js">Sobre Nós</a></li>
             </ul>
           </div>
 
