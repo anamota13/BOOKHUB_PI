@@ -27,8 +27,8 @@ function Navbar() {
                 <ul className="navbar-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">Livros</a></li>
-                    <Link to="/literatura-brasileira">Literatura Brasileira</Link>
-                    <Link to="/sobre">Sobre Nós</Link>
+                    <li><a href="/literatura-brasileira">Literatura Brasileira</a></li>
+                    <li><a href="/sobre">Sobre nós</a></li>
                 </ul>
 
                 <div className="navbar-icon" onClick={() => navigate('/login')} style={{ cursor: 'pointer' }}>
