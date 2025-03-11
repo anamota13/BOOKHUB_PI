@@ -12,7 +12,7 @@ function LiteraturaBrasileira() {
           
         <div className='img-lit'>
 
-<img src={fundo} alt="Literatura Brasileira" className="lit" />
+        <img src={fundo} alt="Literatura Brasileira" className="lit" />
 
 
 </div>
