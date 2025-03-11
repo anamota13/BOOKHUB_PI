@@ -45,9 +45,10 @@ function MainContent() {
                 <Route path="/sobre" element={<Sobre/>} />
                 <Route path="/literatura-brasileira" element={<LiteraturaBrasileira />} />
             </Routes>
-
             {showNavbar && <Footer />}
+           
         </div>
+        
     );
 }
 

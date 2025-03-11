@@ -12,7 +12,7 @@ function Home() {
             </div>
             <div className='img-destaque'>
 
-           <img src={Destaque} alt="Destaque" className="destaque" />
+                <img src={Destaque} alt="Destaque" className="destaque" />
 
 
            </div>
