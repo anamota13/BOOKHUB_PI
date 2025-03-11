@@ -8,7 +8,7 @@ import Home from './components/Home/Home';
 import Faixa from './components/Faixa/Faixa';
 import LiteraturaBrasileira from './components/LiteraturaBrasileira/LiteraturaBrasileira';
 import 'flowbite/dist/flowbite.css';
-import './index.css'; // ou outro arquivo CSS
+import './index.css'; 
 import Sobre from './components/Sobre/Sobre.js';
 
 
