@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Logo from '../../assets/images/logo.png';
-
 import './Cadastro.css';
+import { Faixa } from "../Faixa/Faixa";
 
 const Cadastro = () => {
     const [nome, setNome] = useState('');
@@ -30,6 +30,7 @@ const Cadastro = () => {
             <header className="navbar"></header>
 
             <div className="form-container">
+                <Faixa/>
                 <div className="form-card">
                     <img src={Logo} alt="Logo" className="logo" />
 

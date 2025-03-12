@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import './Login.css';
+import { Faixa } from '../Faixa/Faixa';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -12,6 +13,7 @@ const Login = () => {
         <header className="navbar"></header>
 
         <div className="form-container">
+            <Faixa/>
             <div className="form-card">
                 <img src={Logo} alt="Logo" className="logo" />
                 <h2 className="titulo-bemvindo">Bem-vindo de volta!</h2>
