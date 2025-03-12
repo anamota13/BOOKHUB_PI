@@ -1,8 +1,7 @@
 import React from 'react';
 import './Faixa.css';
 
-function Faixa() {
+export function Faixa() {
     return <div className="faixa"></div>;
 }
 
-export default Faixa;

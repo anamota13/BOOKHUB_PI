@@ -2,29 +2,32 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './LiteraturaBrasileira.css';
 import fundo from '../../assets/images/fundo.png';
 import Footer from "../Footer/Footer";
+import { Navbar } from "../Navbar/Navbar";
+import { Faixa } from "../Faixa/Faixa";
 
 function LiteraturaBrasileira() {
-    return (
+  return (
 
-      
-    
-        <div className="conteudo-lit">
-          
-        <div className='img-lit'>
+
+
+    <div className="conteudo-lit">
+      <Faixa />
+      <Navbar/>
+      <div className='img-lit'>
 
         <img src={fundo} alt="Literatura Brasileira" className="lit" />
 
 
-</div>
+      </div>
 
 
-<div className="content-text-literatura">
+      <div className="content-text-literatura">
 
 
-          <p className="mt-4 text-lg">A história da literatura brasileira tem início em 1500 com a chegada dos portugueses no Brasil. Isso porque as sociedades que aqui estavam eram ágrafas, ou seja, não possuíam uma representação escrita.
-       Assim, a produção literária começa quando os portugueses escrevem sobre suas impressões da terra encontrada e dos povos que aqui viviam.
-Ainda que sejam diários e documentos históricos, esses representam, as primeiras manifestações escritas em território brasileiro.</p>
-        
+        <p className="mt-4 text-lg">A história da literatura brasileira tem início em 1500 com a chegada dos portugueses no Brasil. Isso porque as sociedades que aqui estavam eram ágrafas, ou seja, não possuíam uma representação escrita.
+          Assim, a produção literária começa quando os portugueses escrevem sobre suas impressões da terra encontrada e dos povos que aqui viviam.
+          Ainda que sejam diários e documentos históricos, esses representam, as primeiras manifestações escritas em território brasileiro.</p>
+
         <h3 className="text-3xl font-bold">Divisão da Literatura Brasileira</h3>
         <p className="mt-4 text-lg">
           A literatura brasileira é subdividida em duas grandes eras que acompanham a evolução política e econômica do País.
@@ -38,11 +41,11 @@ Ainda que sejam diários e documentos históricos, esses representam, as primeir
           Voltar para Home
         </Link>
 
-        </div>
-
-
       </div>
-    );
-  }
 
-  export default LiteraturaBrasileira;
+    <Footer />
+    </div>
+  );
+}
+
+export default LiteraturaBrasileira;

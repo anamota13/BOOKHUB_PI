@@ -3,7 +3,7 @@
     flex-direction: column; /* Mantém a faixa separada */
     align-items: center;
     width: 100%; 
-    background-color: #ffffff; 
+    background-color: #fff; 
     color: white;
     position: fixed; 
     top: 0;

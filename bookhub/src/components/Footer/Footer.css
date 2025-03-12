@@ -1,11 +1,12 @@
 .footer {
-    width: 100%;
-    
-    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Mantém a faixa separada */
+    align-items: center;
+    width: 100%; 
+    background-color: white; 
+    color: white;
+    box-shadow: 0px -2px 8px rgba(0, 0 , 0, 0.1);
     padding: 20px 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .footer-container {
